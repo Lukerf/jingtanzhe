@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<mapper namespace = "com.yxg.jingtanzhe.dao.UserDao">
+    <selecct id = "queryUserByUsername" resultType = "com.yxg.jingtanzhe.entity.User">
+        SELECT username,password,sex,phoneNumber,email
+        FROM useraccount
+        WHERE
+        username = #{username}
+    </selecct>
+    <select id = "insertUser" useGenerateKeys="true" keyPorperty = "userid"
+            keyColumn = "user_id" parameterType="com.yxg.jingtanzhe,entity.User">
+        INSERT INTO
+        useracount(username,password,sex,phoneNumber,email)
+        VALUE(#{username},#{password},#{sex},#{phoneNumber},#{email})
+    </select>
+    <select id = "updateUser" parameterType="com.yxg.jingtanzhe,entity.User">
+        UPDATE useraccount
+        <set>
+            <if test
+        </set>
+    </select>
+</mapper>
